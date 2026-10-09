@@ -16,9 +16,9 @@ int main(){
 
     std::cout << "in the following line 0 means even and 1 means odd" << std::endl;
     std::cout << rem << std::endl;
-
-    std::cout << n << std::endl;
-
+    // checking original input matches
+    std::cout << n << std::endl; 
+    // finding max limit of longlong int
     std::cout << std::numeric_limits<long long int>::max() << std::endl;
 
     // later we will upgrade this example to instead print a message saying
