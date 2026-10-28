@@ -1,0 +1,9 @@
+# Ignore everything by default
+*
+
+# Keep C++ source files
+!*/
+!*.cpp
+
+# Keep this gitignore file
+!.gitignore
