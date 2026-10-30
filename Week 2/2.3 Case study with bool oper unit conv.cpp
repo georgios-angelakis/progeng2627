@@ -37,6 +37,7 @@ int main(){
 
     // TEMPERATURE CONVERSION
     std::cin.clear();
+    unit_in = "";
     std::cin >> temp_in >> unit_in;
     valid_unit = true;
 
