@@ -1,27 +1,36 @@
 #include <iostream>
 #include <vector>
 
-int main(){
-    std::vector<int> v; 
+int main() {
+    int n, s;
+    std::vector<int> numbers;
 
-    v.push_back(10);
-    v.push_back(20);
+    std::cout << "please enter n:" << std::endl;
+    std::cin >> n;
 
-    std::cout << v.at(0) << std::endl;
-    // this will print 10
+    for (int i = 0; i < n; i++) {
+        int x;
+        std::cout << "please enter a number:" << std::endl;
+        std::cin >> x;
+        numbers.push_back(x);
+    }
 
-    std::cout << v.at(1) << std::endl;
-    // this will print 20
+    std::cout << "please enter s:" << std::endl;
+    std::cin >> s;
+    std::vector<int> occurence_pos;
 
-    v.at(1) = 15;
+    int count = 0;
+    
+    for (int i = 0; i < n; i++) {
+        if (numbers[i] == s) {
+            occurence_pos.push_back(i);
+            count++;
+        }
+    }
 
-    std::cout << v.at(1) << std::endl;
-    // this will print 15
-
-    v.at(2) = 2;
-    // this will throw an exception
-
-    std::cout << v.at(2) << std::endl;
-    // this will not be executed
-
+    std::cout << "there are " << count << " occurrences of " << s << std::endl;
+    
+    for (int i = 0; i < s; i++) {
+        std::cout << occurence_pos[i] << std::endl;
+    }
 }
