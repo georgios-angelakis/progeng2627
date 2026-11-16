@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
-#include <cmath>
 
-double sum_vector(const std::vector<double>& vin){
+// maybe not the most efficient way:
+double sum_vector(std::vector<double> vin){
 
     double sum = 0;
 
@@ -15,18 +15,20 @@ double sum_vector(const std::vector<double>& vin){
 }
 
 int main(){
-    std::vector<double> v{3, 0.5, -1};
+    std::vector<double> v;
+    int n;
+    double x;
 
-    double expected_sum = 2.5;
+    std::cout << "How many elements?";
+    std::cin >>n;
+
     
+    for (int i = 0; i < n; i++) {
+        std::cout << "Enter element " << i + 1 << ": ";
+        std::cin >> x;
+        v.push_back(x);
+    }
 
-    std::cout << (std::abs(sum_vector(v)) - expected_sum) << std::endl;
-
-    v = {2, -1.1, 7, -1.5};
-
-
-    expected_sum = 6.4;
-
-    std::cout << (std::abs(sum_vector(v)) - expected_sum) << std::endl;
+    std::cout << "the sum is: " << sum_vector(v) << std::endl;
 
 }
