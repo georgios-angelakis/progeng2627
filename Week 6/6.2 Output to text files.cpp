@@ -4,8 +4,15 @@
 #include <vector>
 
 int main(){
-    std::ifstream infile;
-    infile.open("input.txt");
+
+    std::string inputfilename;
+    // as usual not a special name
+    std::cout << "enter name of input file" << std::endl;
+
+    std::cin >> inputfilename;
+
+    std::ifstream infile; 
+    infile.open(inputfilename);
 
     std::vector<int> v;
 
