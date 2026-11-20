@@ -4,6 +4,7 @@
 # Keep C++ source files
 !*/
 !*.cpp
+!*.txt
 
 # Keep this gitignore file
 !.gitignore
