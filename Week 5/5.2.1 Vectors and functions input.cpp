@@ -9,7 +9,7 @@ double sum_vector(std::vector<double> vin){
     for(int i = 0; i < vin.size(); i++){
         sum = sum + vin[i];
     }
-
+    
     return sum;
 
 }
